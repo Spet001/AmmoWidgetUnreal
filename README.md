@@ -15,17 +15,18 @@ This project provides a C++ implementation of an ammo widget that displays the c
 
 ### Character (`Character.h`, `Character.cpp`)
 - **AMyCharacter**: Character class with ammunition management
-- Handles fire input (left mouse button)
+- Handles fire input via Input Action mapping (configure "Fire" action in Project Settings)
 - Cycles ammunition from 5 down to 0, then resets to 5
 - Automatically updates the AmmoWidget when firing
 
 ## Setup
 
 1. Copy the C++ files to your Unreal Engine project's Source folder
-2. Add the widget to your character's Blueprint
-3. Create a UMG Widget Blueprint based on UAmmoWidget
-4. Add an Image component named "AmmoImage" in the widget
-5. Import your ammunition sprite images and add them to the AmmoBrushes array (indices 0-5)
+2. Configure the "Fire" Input Action in Project Settings -> Input (map to desired key, e.g., left mouse button)
+3. Add the widget to your character's Blueprint
+4. Create a UMG Widget Blueprint based on UAmmoWidget
+5. Add an Image component named "AmmoImage" in the widget
+6. Import your ammunition sprite images and add them to the AmmoBrushes array (index 0 = empty, indices 1-5 = 1-5 bullets)
 
 ## Usage
 
